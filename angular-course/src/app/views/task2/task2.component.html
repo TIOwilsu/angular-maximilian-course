@@ -1,0 +1,6 @@
+<app-input
+    placeholder="Digite o nome do usuário"
+    [(model)]="userName"
+></app-input>
+<app-button (click)="handlerEmptyUserName()" [disabled]="!userName">Limpar</app-button>
+

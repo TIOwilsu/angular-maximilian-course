@@ -1,0 +1,10 @@
+<div class="app-alert fadeIn" [ngClass]="[statusClass, positionX, positionY]">
+    <div class="app-alert__content">
+        <div class="app-alert__header">
+            <h4 *ngIf="title" class="app-alert__title">{{ title }}</h4>
+        </div>
+        <div class="app-alert__body">
+            <p *ngIf="description" class="app-alert__description">{{ description }}</p>
+        </div>
+    </div>
+</div>

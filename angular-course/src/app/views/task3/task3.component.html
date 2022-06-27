@@ -1,0 +1,19 @@
+<app-button (click)="handleDisplayDetails()">Display details</app-button>
+<p 
+    *ngIf="showPassword" 
+    class="passoword"
+>
+    My password: mypassword
+</p>
+<div *ngIf="logs.length" class="content-logs">
+    <h3 class="content-logs">Logs list</h3>
+    <ul class="list-logs">
+        <li 
+            *ngFor="let log of logs" 
+            [ngStyle]="{ backgroundColor: log ? 'green' : 'red' }"
+            [ngClass]="{ white : log }"
+        >
+            {{ log ? 'Show' : 'Hidden' }}
+        </li>
+    </ul>
+</div>

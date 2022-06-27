@@ -1,0 +1,11 @@
+$border-radius: 6px;
+
+$border-radius-1x: $border-radius * 0.75;
+$border-radius-2x: $border-radius;
+$border-radius-3x: $border-radius * 1.25;
+
+$borders: (
+   border-radius-1x: $border-radius-1x,
+   border-radius-2x: $border-radius-2x,
+   border-radius-3x: $border-radius-3x 
+);

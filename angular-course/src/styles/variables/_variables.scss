@@ -1,0 +1,20 @@
+@import './side';
+@import './breakpoint';
+@import './border';
+@import './color';
+@import './spacing';
+
+$variables: (
+    $breakpoints,
+    $borders,
+    $colors,
+    $spacings,
+);
+
+:root {
+    @each $variable in $variables {
+        @each $name, $value in $variable {
+            #{'--' + $name}: $value; 
+        }
+    }
+}

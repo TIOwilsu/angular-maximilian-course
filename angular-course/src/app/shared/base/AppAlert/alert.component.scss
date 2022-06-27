@@ -1,0 +1,18 @@
+.app-alert{
+    position: fixed;
+    padding: var(--spacing-4x);
+
+    &__content {
+        border-radius: var(--border-radius-2x);
+        color: var(--white);
+        padding: var(--spacing-4x);
+    }
+
+    &--error > &__content {
+        background-color: var(--red);
+    }
+
+    &--success > &__content {
+        background-color: var(--green);
+    }
+}
