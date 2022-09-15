@@ -1,28 +1,26 @@
 <div class="row">
     <div class="col-xs-12">
-        <button class="btn btn-success">New Recipe</button>
+        <button 
+            class="btn btn-success" 
+            (click)="onAddRecipe()"
+        >
+            New Recipe
+        </button>
     </div>
 </div>
 <hr />
 <div class="row">
     <div class="col-xs-12">
-       <a 
-            href="#" 
-            class="list-group-item d-flex justify-content-between" 
-            *ngFor="let recipe of recipes"
-        >
-            <div>
-                <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-                <small class="list-grousmall-item-text">{{ recipe.description }}</small>
-            </div>
-           <img 
-                [src]="recipe.imagePath" 
-                [alt]="recipe.name" 
-                class="img-fluid" 
-                style="max-height: 50px" 
-            />
-       </a>
-        <app-recipe-item></app-recipe-item>
+        <ng-container *ngIf="recipes.length; else infoText">
+            <app-recipe-item
+                *ngFor="let recipe of recipes" [recipe]="recipe" 
+                (recipeSelected)="onRecipeSelected(recipe)"
+            >
+            </app-recipe-item>
+        </ng-container>
+        <ng-template #infoText>
+            <p>Click in button to add a new recipe!</p>
+        </ng-template>
     </div>
 </div>
 

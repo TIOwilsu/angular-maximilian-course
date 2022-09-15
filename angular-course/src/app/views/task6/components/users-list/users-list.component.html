@@ -1,0 +1,14 @@
+<div class="users-list">
+    <h2 *ngIf="title">{{ title }}</h2>
+    <ul *ngIf="users.length; else emptyText" class="list-group">
+        <app-user 
+            *ngFor="let user of users" 
+            [id]="user.id"
+            [name]="user.name" 
+            [isActive]="user.isActive">
+        </app-user>
+    </ul>
+    <ng-template #emptyText>
+        <li class="list-group-item">Não possui usuários</li>
+    </ng-template>
+</div>

@@ -4,4 +4,5 @@ export type PositionX = 'left' | 'right';
 
 export type PositionY = 'top' | 'bottom';
 
-export type Status = 'error' | 'success' | '';
+export type Status = 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark';
+

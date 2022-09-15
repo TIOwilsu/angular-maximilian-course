@@ -1,0 +1,25 @@
+<div 
+    class="offcanvas" 
+    tabindex="-1" 
+    [class]="_class"
+    [ngClass]="{ show }"
+    [id]="id"
+    [style.visibility]="'visible'" 
+    [attr.aria-labelledby]="ariaLabelledby"
+>
+    <div class="offcanvas-header">
+        <h5 *ngIf="title" class="offcanvas-title" [id]="ariaLabelledby">{{ title }}</h5>
+        <app-button
+            type="button"
+            class="text-reset" 
+            ariaLabel="Close"
+            (click)="toggle()"
+            [close]="true"
+        >
+        </app-button>
+    </div>
+    <div class="offcanvas-body">
+        <ng-content></ng-content>
+    </div>
+</div>
+<app-backdrop [show]="show" type="offcanvas"></app-backdrop>

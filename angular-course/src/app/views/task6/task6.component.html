@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-lg-6">
+        <app-users-list 
+            title="Active Users" 
+            [users]="userService.getActiveUsers()">
+        </app-users-list>
+    </div>
+    <div class="col-lg-6">
+        <app-users-list 
+            title="Inactive Users" 
+            [users]="userService.getInactiveUser()">
+        </app-users-list>
+    </div>
+</div>

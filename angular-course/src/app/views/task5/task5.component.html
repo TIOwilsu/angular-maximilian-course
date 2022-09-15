@@ -1,0 +1,7 @@
+<game-control (onStart)="onStartGame($event)"></game-control>
+<div *ngIf="numbers.length" class="row mt-3">
+    <div *ngFor="let number of numbers" class="col-lg-3 col-md-4 col-12 mb-3">
+        <number [value]="number"></number>
+    </div>
+</div>
+

@@ -12,7 +12,7 @@ export class AlertComponent implements OnInit{
 
     @Input() title:string = '';
     @Input() description:string = '';
-    @Input() status:Status = '';
+    @Input() status?:Status;
     @Input() positionX:PositionX = 'right';
     @Input() positionY:PositionY = 'top';
 

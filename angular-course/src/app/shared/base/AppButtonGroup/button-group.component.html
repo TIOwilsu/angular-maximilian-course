@@ -1,0 +1,16 @@
+<div [class]="_class">
+    <app-button 
+        *ngFor="let button of buttons" 
+        [type]="button.type"
+        [close]="button.close"
+        [disabled]="button.disabled"
+        [ariaLabel]="button.ariaLabel"
+        [class]="button.class"
+        [status]="button.status"
+        [active]="button.active"
+        [routerLink]="button.routerLink"
+        [routerLinkActive]="button.routerLinkActive"
+    >
+        {{ button.text }}
+    </app-button>
+</div>

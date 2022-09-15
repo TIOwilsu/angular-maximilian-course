@@ -1,0 +1,17 @@
+<div class="game-control">
+    <h3>Control your game!</h3>
+    <button 
+        class="btn btn-success me-3" 
+        (click)="start()" 
+        [disabled]="started"
+    >
+        Start
+    </button>
+    <button 
+        class="btn btn-danger" 
+        (click)="stop()" 
+        [disabled]="!started"
+    >
+        Stop
+    </button>
+</div>

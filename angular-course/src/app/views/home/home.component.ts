@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'home',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent {
-    title = 'angular-course';
+export class HomeComponent implements OnInit{
+  title = 'angular-course';
+
+  constructor(private router: Router){}
+
+  ngOnInit() {
+    console.log(this.router.config);
+  }
 }

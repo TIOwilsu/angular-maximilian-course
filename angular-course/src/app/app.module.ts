@@ -15,7 +15,6 @@ import { ViewsModule } from './views/views.module';
     SharedModule,
     ViewsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
